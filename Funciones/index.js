@@ -9,13 +9,13 @@ function imprimir(name, lastName) {
 
 imprimir('fer', 'alvarado')
 
-function imprimir2 ({ name, lastName }) {
+function imprimir2({ name, lastName }) {
   console.log(name, lastName)
 }
 
 imprimir2({ name: 'rosa', lastName: 'azul' })
 
-function imprimir3 ({ name, lastName }) {
+function imprimir3({ name, lastName }) {
   console.log(name, lastName)
 }
 
@@ -23,7 +23,7 @@ imprimir3({ lastName: 'azul', name: 'rosa' })
 
 /* OTRA FORMA */
 
-function imprimir4 ({ name, lastName, age, gender, height }) {
+function imprimir4({ name, lastName, age, gender, height }) {
   console.log(name, lastName, age, gender)
 }
 
@@ -37,7 +37,7 @@ imprimir4({
 
 /* PROPS IMPRIME SOLO LO QUE QUIERO */
 
-function imprimir5 (props) {
+function imprimir5(props) {
   const { age, ...rest } = props
   console.log(age, rest)
 }
@@ -49,3 +49,33 @@ imprimir5({
   gender: 'female',
   height: '1.54'
 })
+
+/* SCOPE GLOBAL */
+
+const a = 'Hola Mundo'
+
+console.log(a)
+
+/* SCOPE LOCAL */
+
+function scope() {
+  const b = 'Saludos'
+  console.log(b)
+}
+
+scope()
+
+/* FUNCION SUMA */
+
+function suma(a, b) {
+  const resultado = a + b
+  console.log(resultado)
+}
+
+suma(4, 5)
+
+/* TEMPLATE STRINGS / INTERPOLACIÓN */
+
+const person = 'Fer'
+
+console.log(`Hola mundo ${person} mucho gusto`)
