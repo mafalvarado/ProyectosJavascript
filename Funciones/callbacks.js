@@ -1,11 +1,17 @@
-const imprimir = (message) => console.log(message)
+const myArray = ['Omar', 'Denise', 'Miguel', 'Mario', 'Eduardo', 'Miguel', 'Miguel', 'Miguel', 'Miguel']
+const cosa = 'Miguel'
+/* const search=(thing)=>thing===cosa */
 
-const formato = (str, callback) => {
-  const formatted = str.split('').reverse().join(' ')
-  callback(formatted)
-  return formatted
+// const found = cosas.filter((cosa)=>cosa===buscar)
+const myfuncion = (array, callback) => {
+  const newArray = []
+  array.forEach((element) => {
+    const exist = callback(element)
+    if (exist) newArray.push(element)
+  })
+  return newArray
 }
+/* const search=(thing)=>thing===cosa */
 
-formato('Hola mundo', imprimir)
-
-// imprimir ('hola como están?')
+console.log(myfuncion(myArray, (thing) => thing === cosa))
+// console.log(myfuncion(myArray,search))
