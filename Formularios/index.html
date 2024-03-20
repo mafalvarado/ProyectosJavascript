@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+
+  <script src="./index.js"></script>
+
+  <style>
+    html, 
+    body {
+        background-color: rgb(161, 149, 233);
+
+    }
+
+    textarea {
+        border-color: rgb(42, 162, 218);
+        border-width: 5px;
+        height: 200px;
+        max-width: 500px;
+        width: 100%;
+
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+    <h1>Formularios</h1>
+
+    <!-- action = a donde la información va a paarar / enctype = como vamos a codificar el formualario -->
+    <form action="" method="GET" enctype="multipart/form-data">
+
+
+        <!-- el value es lo que se va a back -->
+        <select name="fruits">
+            <option value="" disabled selected required="">Selecciona una fruta</option>
+            <option value="manzana">manzana</option>
+            <option value="banana">banana</option>
+            <option value="piña">piña</option>
+            <option value="pera" disabled>pera</option>
+        </select>
+        <br>
+        <br>
+
+        <input name="phone" type="tel">
+        <input name="email" type="email">
+        <!-- puedes poner 'text' en la consola en lugar de password para ver la contraseña -->
+        <input name="email" type="password">
+        <!-- el name es el mismo / el type="radio" te selecciona una sola opción -->
+        <label for="">Pelota</label>
+        <input name="cosas" type="checkbox" value="pelota">
+        <label for="">Muñeca</label>
+        <input name="cosas" type="checkbox" value="muñeca">
+        <label for="">Bici</label>
+        <input name="cosas" type="checkbox" value="bici">
+        <label for="">Monopoli</label>
+        <input name="cosas" type="checkbox" value="monopoli">
+
+
+        <br>
+        <br>
+        <!--si no tiene nombre o esta desabilitado, no lo va a mandar-->
+        <textarea name="comments" placeholder="Escribe Aquí..." required></textarea>
+        <button type="Submit">Enviar</button>
+
+    </form>
+
+  
+</body>
+
+
+</html>
